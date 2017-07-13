@@ -1,29 +1,44 @@
 
 var express = require('express')
 var router = express.Router()
-var data = require('./data.json')
 var fs = require('fs')
 
+function readData (callback) {
+  fs.readFile(__dirname + '/data.json', 'utf8', (err, data) => {
+    if (err) throw err
+    callback(JSON.parse(data))
+  })
+}
+
+function writeData(data, callback) {
+  fs.writeFile(__dirname + '/data.json', JSON.stringify(data), (err) => {
+    if (err) throw err
+    callback()
+  })
+}
+
 router.get('/ptp', function(req, res) {
-  res.render('postit/index.hbs', data)
+  readData(function(data) {
+    res.render('postit/index.hbs', data)
+  })
 })
 
 //main pg
 router.get('/ptp/:id', function(req, res){
   var id = req.params.id
-  var singlePostit = data.postit.find(function(postitNote){
-    return id == singlePostit.id
+  readData(function(data) {
+    var singlePostit = data.postit.find(function(postitNote){
+      return id == singlePostit.id
+    })
+    res.render('postit/edit', singlePostit)
   })
-  res.render('postit/edit', singlePostit)
 })
 
 //edit page without edit functionality
 router.get('/ptp/edit/:id', function(req, res) {
   var id = req.params.id
-
-  fs.readFile(__dirname + '/data.json', 'utf8', (err, data) => {
-    if (err) throw err
-    var singlePostit = JSON.parse(data).postit.find(function(singlePostit){
+  readData(function(data) {
+    var singlePostit = data.postit.find(function(singlePostit){
       return id == singlePostit.id
     })
     res.render('postit/edit', singlePostit)
@@ -36,15 +51,14 @@ router.get('/ptp/edit/:id', function(req, res) {
 router.post('/ptp/edit/:id', function(req, res){
   var postitData = req.body
   var id = req.params.id
-  var singlePostit = data.postit.find(function(singlePostit) {
-    return id == singlePostit.id
-  })
-
-  singlePostit.comment = postitData.comment
-
-  fs.writeFile('data.json', JSON.stringify(data), function(err){
-    if (err) throw err
-    res.redirect('/ptp')
+  readData(function(data) {
+    var singlePostit = data.postit.find(function(singlePostit) {
+      return id == singlePostit.id
+    })
+    singlePostit.comment = postitData.comment
+    writeData(data, function() {
+      res.redirect('/ptp')
+    })
   })
 })
 
