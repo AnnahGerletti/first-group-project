@@ -9,5 +9,10 @@ router.get('/ptp', function(req, res) {
 })
 
 
+router.get('/', function(req, res) {
+  res.render('postit/index.hbs', data)
+})
+
+
 
 module.exports = router
