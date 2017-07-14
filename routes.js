@@ -60,10 +60,10 @@ router.post('/ptp/edit/:id', function(req, res){
     })
   })
 })
-
-router.get('/', function(req, res) {
-  res.render('postit/index.hbs', data)
-})
+// 
+// router.get('/', function(req, res) {
+//   res.render('postit/index.hbs', data)
+// })
 
 
 
