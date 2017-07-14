@@ -1,0 +1,49 @@
+body {
+  /*background-image: url("/images/wall.jpg"); */
+  background-color: lightblue;
+  margin: 0 auto;
+  width: 50%;
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
+}
+
+.wall {}
+
+.pin-board {
+  background-image: url("/images/board.png");
+  background-repeat: no-repeat;
+  width: 902px;
+  height: 610px;
+  -webkit-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+}
+
+.postit {
+  background-color: yellow;
+  margin: 52px;
+  width: 200px;
+  height: 200px;
+  float: left;
+  -webkit-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+
+}
+
+.pin {
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  margin: 0 auto;
+
+
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  border: 0px solid #000000;
+  /*Shadow 1*/
+  -webkit-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+}
