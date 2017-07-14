@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tape test/**/*.test.js | tap-diff",
     "start": "nodemon index.js --ignore data.json"
   },
   "repository": {
@@ -19,8 +19,12 @@
   "homepage": "https://github.com/ushamacdonald/first-group-project#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.2",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0",
+    "tap-diff": "^0.1.1",
+    "tape": "^4.7.0"
   }
 }
