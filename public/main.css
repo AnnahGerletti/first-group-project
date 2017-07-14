@@ -29,6 +29,35 @@ body {
   box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
 }
 
+.form {
+  margin: auto;
+  Padding: 10px;
+  font-size: 26px;
+  background-color: yellow;
+  width: 400px;
+  height: 400px;
+  -webkit-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+}
+
+input[type="text"] {
+  font-size: 30px;
+  height: 260px;
+  text-align: center;
+}
+
+input[type="submit"] {
+  background-color: #f2d6ac;
+  margin: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  font-family: 'Architects Daughter', cursive;
+}
+
 .pin {
   background-color: red;
   height: 20px;
@@ -61,7 +90,9 @@ body {
 }
 
 .text {
-  margin-top: 20px
+  margin-top: 20px;
+  font-size: 25px;
+  color: black;
 }
 
 .Note {
