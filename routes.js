@@ -16,6 +16,10 @@ function writeData(data, callback) {
   })
 }
 
+router.get('/', function(req, res){
+  res.redirect('/ptp')
+})
+
 router.get('/ptp', function(req, res) {
   readData(function(data) {
     res.render('postit/index.hbs', data)
@@ -60,7 +64,7 @@ router.post('/ptp/edit/:id', function(req, res){
     })
   })
 })
-// 
+//
 // router.get('/', function(req, res) {
 //   res.render('postit/index.hbs', data)
 // })
