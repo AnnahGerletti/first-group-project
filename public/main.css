@@ -1,0 +1,109 @@
+body {
+  background-color: lightblue;
+  margin: 0 auto;
+  width: 50%;
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
+}
+
+.wall {}
+
+.pin-board {
+  background-image: url("/images/board.png");
+  background-repeat: no-repeat;
+  width: 902px;
+  height: 610px;
+  -webkit-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+}
+
+.postit {
+  background-color: yellow;
+  margin: 52px;
+  width: 200px;
+  height: 200px;
+  float: left;
+  -webkit-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+}
+
+.form {
+  margin: auto;
+  Padding: 10px;
+  font-size: 26px;
+  background-color: yellow;
+  width: 400px;
+  height: 400px;
+  -webkit-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+}
+
+input[type="text"] {
+  font-size: 30px;
+  height: 260px;
+  text-align: center;
+}
+
+input[type="submit"] {
+  background-color: #f2d6ac;
+  margin: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.pin {
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  margin: 0 auto;
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  border: 5px solid #000000
+  /*Shadow 1*/
+  -webkit-box-shadow: 3px 6px 21px 2px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 3px 6px 21px 2px rgba(0, 0, 0, 1);
+  box-shadow: 3px 6px 21px 2px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: inset 3px 6px 21px -2px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 3px 6px 21px -2px rgba(0, 0, 0, 1);
+  box-shadow: inset 3px 6px 21px -2px rgba(0, 0, 0, 1);
+}
+
+.pin-head {
+  background-color: red;
+  height: 10px;
+  width: 10px;
+  margin: 0 auto;
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  -webkit-box-shadow: -17px 8px 38px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -17px 8px 38px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: -17px 8px 38px 3px rgba(0, 0, 0, 0.75);
+}
+
+.text {
+  margin-top: 20px;
+  font-size: 25px;
+  color: black;
+}
+
+.Note {
+  background-color: #f2d6ac;
+  width: 200px;
+  height: 350px;
+  padding: 10px;
+  -webkit-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  box-shadow: -1px 9px 21px 1px rgba(0, 0, 0, 0.38);
+  margin-left: 615px;
+  margin-top: 76px;
+  position: absolute;
+}

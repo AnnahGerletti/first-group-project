@@ -1,10 +1,27 @@
 <div class="container">
-  {{#each postit}}
-    <div class="">
-      {{id}}
+  <div class="wall">
+    <div class="pin-board">
+      {{#each postit}}
+        <a href="/ptp/edit/{{id}}">
+          <div class="postit">
+            <div class="pin">
+              <div class="pin-head"></div>
+            </div>
+            <div class="text">
+              <!-- {{id}} -->
+              {{comment}}
+            </div>
+          </div>
+        </a>
+      {{/each}}
+      <div class="Note">
+        <div class="pin">
+          <div class="pin-head"></div>
+        </div>
+        </br>
+        </br>
+        Click on a post it to post a message!
+      </div>
     </div>
-    <div class="">
-      {{comment}}
-    </div>
-  {{/each}}
+  </div>
 </div>
